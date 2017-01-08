@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV PERL_MM_USE_DEFAULT 1
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y cron libdbd-sqlite3-perl python-pip unzip wget ssh-client libnet-amazon-ec2-perl rsync libdata-dumper-simple-perl
+RUN apt-get install -y cron libdbd-sqlite3-perl python-pip unzip wget ssh-client libnet-amazon-ec2-perl rsync libdata-dumper-simple-perl lame vorbis-tools clamav
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade google-api-python-client progressbar2
