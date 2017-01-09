@@ -19,6 +19,6 @@ RUN mkdir /data
 RUN mkdir /data/cronjobs
 RUN rm -rf /etc/cron.d && ln -s /data/cronjobs /etc/cron.d
 RUN rm /etc/ssmtp/ssmtp.conf && touch /data/ssmtp.conf && ln -s /data/ssmtp.conf /etc/ssmtp/ssmtp.conf
-RUN touch /data/id_rsa && touch /data/id_rsa.pub && mkdir /root/.ssh && ln -s /data/id_rsa /root/.ssh/id_rsa && ln -s /data/id_rsa.pub /root/.ssh/id_rsa.pub
+RUN touch /data/id_rsa && touch /data/id_rsa.pub && mkdir /root/.ssh && ln -s /data/id_rsa /root/.ssh/id_rsa && ln -s /data/id_rsa.pub /root/.ssh/id_rsa.pub && touch /data/known_hosts && ln -s /data/known_hosts /root/.ssh/known_hosts
 
 CMD ["cron", "-f"]
