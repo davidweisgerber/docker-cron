@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV PERL_MM_USE_DEFAULT 1
-ENV TZ=Europe/London
+ENV TZ=Europe/Berlin
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y cron libdbd-sqlite3-perl python-pip unzip wget ssh-client libnet-amazon-ec2-perl rsync libdata-dumper-simple-perl lame vorbis-tools clamav ssmtp mailutils git zip
