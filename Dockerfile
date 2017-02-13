@@ -7,6 +7,11 @@ ENV TZ=Europe/Berlin
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y cron libdbd-sqlite3-perl python-pip unzip wget ssh-client libnet-amazon-ec2-perl rsync libdata-dumper-simple-perl lame vorbis-tools clamav ssmtp mailutils git zip
 
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8 
+ENV LANGUAGE en_US:en 
+ENV LC_ALL en_US.UTF-8
+
 RUN pip install --upgrade pip
 RUN pip install --upgrade google-api-python-client progressbar2
 
