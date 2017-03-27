@@ -16,7 +16,7 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade google-api-python-client progressbar2
 
 RUN mkdir /install
-RUN cd /install && wget https://github.com/tokland/youtube-upload/archive/master.zip && unzip master.zip && cd youtube-upload-master && python setup.py install
+RUN cd /install && git clone https://github.com/tokland/youtube-upload.git && cd youtube-upload && python setup.py install
 RUN rm -rf /install
 
 RUN perl -MCPAN -e 'install WebService::Amazon::Route53'
